@@ -22,7 +22,7 @@ const RideForm = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8000/rides/rides', formData);
+      const response = await axios.post('http://localhost:8000/api/v1/rides/rides', formData);
       setFormData({
         client_name: '',
         phone_number: '',

@@ -37,6 +37,7 @@ class RideService:
         return {"message": "Ride deleted successfully"}
 
     def _validate_ride_time(self, pickup_time):
-        if pickup_time and pickup_time < datetime.now(timezone.utc):
+        current_time = datetime.utcnow() 
+        if pickup_time and pickup_time < current_time:
             raise ValueError("Pickup time cannot be in the past")
 
