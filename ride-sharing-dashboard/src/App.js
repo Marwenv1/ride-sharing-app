@@ -1,12 +1,14 @@
 import React from 'react';
-import RideForm from './components/RideForm';
+import CreateRide from './pages/CreateRide'; 
+import Layout from './components/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
   return (
-    <div className="App">
-      <RideForm />
-    </div>
+    <Layout>
+      <CreateRide />
+    </Layout>
   );
 };
 
